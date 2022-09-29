@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 98%); 
+    height: 100vh;
+    font-family: 'poppins'; 
+}
+main {
+    display: grid;
+    justify-content: center;
+    width: 70%;
+    height: fit-content;
+}
+p {
+    color: hsl(229, 6%, 66%);
+    font-size: 13px;
+}
+.container1 {
+    text-align: center;
+}
+.container1 h1 {
+    font-weight: 200;
+    font-size: 27px;
+}
+.container1 h2 {
+    font-size: 27px;
+    font-weight: 600;
+}
+.container1 p {
+    margin: 10px auto 0 auto;
+    width: 50%;
+    line-height: 20px;
+}
+.container2 {
+    display: grid;
+    gap: 1.3rem;
+    grid-template-areas: 
+    'one two four'
+    'one three four';
+    align-items: center;
+    margin-top: 1rem;
+}
+.body {
+    padding: 1.5rem;
+    /* width: 20rem; */
+    border-radius: 0.3rem;
+    background-color: white;
+}
+.body h3 {
+    font-weight: 600;
+}
+.body:first-child {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    grid-area: one;
+    box-shadow: -5px 10px 20px hsla(234, 12%, 34%, 0.2)
+}
+.body:nth-child(2){
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-area: two;
+    box-shadow: 0px 10px 20px hsla(234, 12%, 34%, 0.2)
+}
+.body:nth-child(3){
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-area: three;
+    box-shadow: 0px 10px 20px hsla(234, 12%, 34%, 0.2)
+}
+.body:last-child{
+    border-top: 3px solid hsl(212, 86%, 64%);
+    grid-area: four;
+    box-shadow: 5px 10px 20px hsla(234, 12%, 34%, 0.2)
+}
+section div div p {
+    margin-top: 10px;
+}
+section div div img {
+    margin-top: 2rem;
+    height: 3.125rem;
+    float: right;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (max-width: 375px) {
+    body {
+        display: block;
+        height: 100%;
+    }
+    main {
+        margin: 20px auto 0 auto;
+        width: 90%;
+    }
+    .container1 h1 {
+        font-size: 20px;
+    }
+    .container1 h2 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .container1 p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        /* border: 2px solid black; */
+        margin-top: 3rem;
+        height: 100%;
+        width: 100%;
+    }
+    .body {
+        padding: 1rem 1.5rem;
+    }
+    section div div p {
+        margin-top: 0.5rem;
+    }
+    section div div img {
+        margin-top: 3rem;
+        height: 1.5rem;
+    }
+    footer {
+        position: relative;
+        margin-top: 20px;
+    }
+}
